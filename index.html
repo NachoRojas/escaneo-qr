@@ -3,30 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escanear Código QR y Código de Barras</title>
+    <title>Escanear QR y Código de Barras</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/@zxing/library@latest"></script>
 </head>
 <body>
     <div class="container">
         <header>
-            <h2>Escanear Código QR y Código de Barras</h2>
+            <h4>Escanear QR y Código de Barras</h4>
         </header>
         <main>
+            <div id="datos-adicionales">
+                <form id="form-datos">
+                    <div id="inputs_datos">
+                        <label for="fecha">Fecha :</label>
+                        <input type="text" id="fecha" placeholder="dd-mm-aaaa" required>
+                    </div>
+                    <div id="inputs_datos">
+                        <label for="hora">Hora :</label>
+                        <input type="text" id="hora" required>
+                    </div>
+                    <div id="inputs_datos">
+                        <label for="unidad">Unidad :</label>
+                        <input type="number" id="unidad" required>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+                <div id="datos-resultado"></div>
+            </div>
             <div class="camera-container">
-                <select id="dispositivos-entrada-video" class="select-camera"></select>
                 <video id="vista-previa" autoplay muted></video>
+                <select id="dispositivos-entrada-video" class="select-camera"></select>
                 <div id="resultado"></div>
             </div>
             <div id="codigos-escaneados">
-                <h2>Códigos Escaneados:</h2>
+                <h2>Escaneados:</h2>
                 <ul id="lista-codigos"></ul>
             </div>
         </main>
-        <footer>
-            <p>&copy; Aplicacion de escaneo</p>
-        </footer>
     </div>
-    <script src="index.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
