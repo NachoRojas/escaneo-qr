@@ -5,10 +5,16 @@ window.addEventListener('load', async () => {
     const selectDispositivos = document.getElementById('dispositivos-entrada-video');
     const listaCodigos = document.getElementById('lista-codigos');
     const codigosEscaneados = []; // Array para almacenar los códigos escaneados
-    const datosGuardados = []; // Array para almacenar los objetos con datos guardados
     const delayMs = 1300; // 1.3 segundos de delay
     let escaneoActivo = true; // Bandera para controlar el estado del escaneo
     let ultimoCodigoEscaneado = ''; // Variable para almacenar el último código escaneado
+
+    // Variables separadas para los datos
+    let fechaGuardada = '';
+    let horaGuardada = '';
+    let unidadGuardada = '';
+    let legajoGuardado = '';
+    let sedeGuardada = '';
 
     function agregarCodigoEscaneado(codigo) {
         ultimoCodigoEscaneado = codigo;
@@ -52,13 +58,11 @@ window.addEventListener('load', async () => {
             selectDispositivos.appendChild(option);
         });
 
-        // Intentar seleccionar automáticamente la cámara frontal en iOS
         const camaraFrontal = dispositivosEntradaVideo.find(dispositivo => dispositivo.label.toLowerCase().includes('front'));
         if (camaraFrontal) {
             iniciarEscaneo(camaraFrontal.deviceId);
             selectDispositivos.value = camaraFrontal.deviceId;
         } else {
-            // Iniciar escaneo con el primer dispositivo disponible por defecto
             if (dispositivosEntradaVideo.length > 0) {
                 iniciarEscaneo(dispositivosEntradaVideo[0].deviceId);
                 selectDispositivos.value = dispositivosEntradaVideo[0].deviceId;
@@ -111,51 +115,36 @@ window.addEventListener('load', async () => {
 
     // Manejo del envío del formulario
     const formDatos = document.getElementById('form-datos');
-    formDatos.addEventListener('submit', async (event) => {
+    formDatos.addEventListener('submit', (event) => {
         event.preventDefault(); // Prevenir el envío del formulario
 
-        // Guardar los valores en variables separadas
-        const fecha = document.getElementById('fecha').value;
-        const hora = document.getElementById('hora').value;
-        const unidad = document.getElementById('unidad').value;
+        // Obtener los valores de los campos
+        fechaGuardada = document.getElementById('fecha').value;
+        horaGuardada = document.getElementById('hora').value;
+        unidadGuardada = document.getElementById('unidad').value;
+        legajoGuardado = document.getElementById('legajo').value;
+        sedeGuardada = document.getElementById('sede').value;
 
-        // Validar que el código de barras haya sido escaneado
-        if (!ultimoCodigoEscaneado) {
-            elementoResultado.textContent = 'Por favor, escanee un código de barras antes de enviar.';
+        // Validar el número de legajo y la sede
+        if (!legajoGuardado.match(/^\d+$/)) {
+            alert('El número de legajo debe ser numérico.');
             return;
         }
 
-        try {
-            const respuesta = await fetch('http://mtlapp.dyndns.org/api-despacho/Registraciones', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': 'Basic ZGVzcGFjaGFudGU6MjAyNHNlcCo='
-                },
-                body: JSON.stringify({
-                    fechaSalida: fecha,
-                    horaSalida: hora,
-                    unidad: parseInt(unidad, 10),
-                    codBarras: ultimoCodigoEscaneado
-                })
-            });
-
-            if (!respuesta.ok) {
-                throw new Error('Error en la respuesta del servidor.');
-            }
-
-            // Agregar datos guardados al array
-            datosGuardados.push({
-                fechaSalida: fecha,
-                horaSalida: hora,
-                unidad: parseInt(unidad, 10),
-                codBarras: ultimoCodigoEscaneado
-            });
-
-            elementoResultado.textContent = 'Datos guardados correctamente.';
-        } catch (error) {
-            console.error('Error al guardar datos:', error);
-            elementoResultado.textContent = 'Error al guardar datos.';
+        if (!['AEP', 'EZE', 'TMAD'].includes(sedeGuardada)) {
+            alert('La sede seleccionada es inválida.');
+            return;
         }
+
+        // Mostrar los datos en el elemento datos-resultado
+        const datosResultado = document.getElementById('datos-resultado');
+        datosResultado.textContent = `Código: ${ultimoCodigoEscaneado}, Fecha: ${fechaGuardada}, Hora: ${horaGuardada}, Unidad: ${unidadGuardada}, Legajo: ${legajoGuardado}, Sede: ${sedeGuardada}`;
+
+        // Limpiar los campos de entrada
+        document.getElementById('fecha').value = '';
+        document.getElementById('hora').value = '';
+        document.getElementById('unidad').value = '';
+        document.getElementById('legajo').value = '';
+        document.getElementById('sede').value = '';
     });
 });
