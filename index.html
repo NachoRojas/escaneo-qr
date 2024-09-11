@@ -3,58 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escanear QR y Código de Barras</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/@zxing/library@latest"></script>
+    <title>Identikit de Ignacio Rojas</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h4>Escanear QR y Código de Barras</h4>
-        </header>
-        <main>
-            <div id="datos-adicionales">
-                <form id="form-datos">
-                    <div id="inputs_datos">
-                        <label for="fecha">Fecha :</label>
-                        <input type="text" id="fecha" placeholder="dd-mm-aaaa" required>
-                    </div>
-                    <div id="inputs_datos">
-                        <label for="hora">Hora :</label>
-                        <input type="text" id="hora" required>
-                    </div> 
-                    <div id="inputs_datos">
-                        <label for="unidad">Unidad :</label>
-                        <input type="number" id="unidad" required>
-                    </div>
-                    <div id="inputs_datos">
-                        <label for="legajo">Número de Legajo :</label>
-                        <input type="text" id="legajo" required>
-                    </div>
-                    <div id="inputs_datos">
-                        <label for="sede">Sede :</label>
-                        <select id="sede" required>
-                            <option value="">Seleccione una sede</option>
-                            <option value="AEP">AEP</option>
-                            <option value="EZE">EZE</option>
-                            <option value="TMAD">TMAD</option>
-                        </select>
-                    </div>
-                    <button type="submit">Enviar</button>
-                </form>
-                <div id="datos-resultado"></div>
-            </div>
-            <div class="camera-container">
-                <video id="vista-previa" autoplay muted></video>
-                <select id="dispositivos-entrada-video" class="select-camera"></select>
-                <div id="resultado"></div>
-            </div>
-            <div id="codigos-escaneados">
-                <h2>Escaneados:</h2>
-                <ul id="lista-codigos"></ul>
-            </div>
-        </main>
-    </div>
-    <script src="index.js"></script>
+    <header>
+        <h1>Identikit de Ignacio Rojas</h1>
+    </header>
+
+    <section id="identikit">
+        <h2>Sobre mí</h2>
+        <p><strong>Nombre:</strong> Ignacio Rojas</p>
+        <p><strong>Edad:</strong> 23 años</p>
+        <p><strong>Hobbies:</strong> Me gusta el fútbol.</p>
+        <p><strong>Equipo favorito:</strong> Soy hincha de Boca Juniors.</p>
+    </section>
+
+    <section id="tierlist">
+        <h2>Tier List de Películas</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Tier</th>
+                    <th>Película</th>
+                    <th>Imagen</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>S-Tier</td>
+                    <td>Interstellar</td>
+                    <td><!-- Espacio para imagen --></td>
+                </tr>
+                <tr>
+                    <td>A-Tier</td>
+                    <td>Inception</td>
+                    <td><!-- Espacio para imagen --></td>
+                </tr>
+                <tr>
+                    <td>B-Tier</td>
+                    <td>The Dark Knight</td>
+                    <td><!-- Espacio para imagen --></td>
+                </tr>
+                <tr>
+                    <td>C-Tier</td>
+                    <td>Tenet</td>
+                    <td><!-- Espacio para imagen --></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="video">
+        <h2>Video Favorito</h2>
+        <p><a href="https://www.youtube.com/watch?v=VIDEO_ID" target="_blank">Ver mi video favorito</a></p>
+    </section>
+
+    <section id="redirecciones">
+        <h2>Redirecciones a sitios web</h2>
+        <ul>
+            <li><a href="https://www.bocajuniors.com.ar" target="_blank">Sitio Oficial de Boca Juniors</a></li>
+            <li><a href="https://www.imdb.com" target="_blank">IMDb - Información de películas</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Hecho por Ignacio Rojas - 2024</p>
+    </footer>
 </body>
 </html>
