@@ -1,183 +1,58 @@
-/* Estilos generales */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.container {
-    max-width: 800px;
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    height: 100%; /* Ajuste para ocupar toda la altura */
-}
-
-#inputs_datos {
-    margin-block: 10px;
-}
-
-#datos-adicionales {
-    text-align: center;
 }
 
 header {
-    background-color: #f28c1e; /* Color actualizado */
-    color: #fff;
+    background-color: #003366;
+    color: white;
     text-align: center;
-    padding: 5px;
+    padding: 10px 0;
 }
 
-header h1 {
+h1 {
     margin: 0;
-    font-size: 1.5em; /* Ajuste del tamaño de la fuente */
 }
 
-main {
-    flex: 1;
+section {
+    margin: 20px;
     padding: 20px;
-    overflow-y: auto; /* Permitir el desplazamiento en la sección principal */
+    background-color: white;
+    border-radius: 10px;
 }
 
-.camera-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+h2 {
+    color: #003366;
 }
 
-.select-camera {
-    margin-bottom: 20px;
-    padding: 10px;
-    font-size: 1em;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+table {
     width: 100%;
-    max-width: 400px;
+    border-collapse: collapse;
+    margin-top: 10px;
 }
 
-video {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    max-height: 300px; /* Altura máxima para el video */
-    border: 2px solid #f28c1e; /* Color actualizado */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#resultado {
-    margin-top: 20px;
-    font-size: 1.2em;
-    color: #333;
-    text-align: center;
+table th, table td {
     padding: 10px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 400px;
+    text-align: left;
 }
 
-#codigos-escaneados {
-    margin-top: 20px;
+table th {
+    background-color: #003366;
+    color: white;
 }
 
-#codigos-escaneados h2 {
-    font-size: 1.5em;
-    color: #f28c1e; /* Color actualizado */
-    text-align: center;
-}
-
-#lista-codigos {
-    list-style-type: none;
-    padding: 0;
-    max-width: 400px;
-    margin: 0 auto;
-    max-height: 200px; /* Altura máxima para la lista */
-    overflow-y: auto; /* Permitir el desplazamiento vertical */
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #fff;
-}
-
-#lista-codigos li {
-    margin: 10px;
-    background-color: #e0e0e0;
-    padding: 10px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-#lista-codigos li:hover {
-    background-color: #d0d0d0;
+table td {
+    background-color: #f4f4f4;
 }
 
 footer {
-    background-color: #f28c1e; /* Color actualizado */
-    color: #fff;
     text-align: center;
     padding: 10px;
-}
-
-@media (max-width: 600px) {
-    .select-camera {
-        width: 100%;
-    }
-
-    video {
-        max-width: 100%;
-    }
-
-    #resultado {
-        max-width: 100%;
-    }
-
-    #lista-codigos {
-        max-width: 100%;
-    }
-}
-
-/* Estilos adicionales para los nuevos campos */
-#inputs_datos label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-#inputs_datos input {
+    background-color: #003366;
+    color: white;
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1em;
-}
-
-#form-datos {
-    margin-bottom: 20px;
-}
-
-#form-datos button {
-    padding: 10px 20px;
-    font-size: 1em;
-    color: #fff;
-    background-color: #f28c1e; /* Color actualizado */
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-#form-datos button:hover {
-    background-color: #e07b1b;
-}
-
-#datos-adicionales {
-    margin-bottom: 20px;
 }
