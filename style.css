@@ -1,74 +1,114 @@
+/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #002f6c; /* Azul oscuro de Boca */
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f5;
+    color: #333;
     margin: 0;
     padding: 0;
-    color: white;
 }
 
+/* Encabezado */
 header {
-    background-color: #ffc107; /* Amarillo de Boca */
-    color: #002f6c; /* Texto en azul */
+    background-color: #4a90e2; /* Azul suave */
+    color: #fff;
     text-align: center;
     padding: 20px 0;
 }
 
 h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 2.5em;
+    letter-spacing: 2px;
 }
 
+/* Secciones */
 section {
     margin: 20px;
     padding: 20px;
-    background-color: #ffc107; /* Fondo amarillo para las secciones */
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    color: #002f6c; /* Texto en azul */
 }
 
 h2 {
-    color: #002f6c;
-    border-bottom: 2px solid #002f6c;
-    padding-bottom: 5px;
+    color: #4a90e2;
+    font-size: 1.8em;
+    border-bottom: 2px solid #f5a623; /* Naranja suave */
+    padding-bottom: 10px;
 }
 
-p, li {
-    font-size: 1.2em;
-}
-
+/* Tabla de tier list */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 table th, table td {
     padding: 15px;
     text-align: left;
-    border: 1px solid #002f6c; /* Bordes en azul */
+    border-bottom: 1px solid #ddd;
 }
 
 table th {
-    background-color: #002f6c; /* Azul en los encabezados */
-    color: white; /* Texto blanco */
+    background-color: #f5a623; /* Naranja suave */
+    color: #fff;
+    font-weight: bold;
 }
 
 table td {
-    background-color: #ffc107; /* Amarillo para las celdas */
-    color: #002f6c;
+    background-color: #f9f9f9;
 }
 
-table img {
-    max-width: 100px;
+/* Estilo para enlaces */
+a {
+    color: #4a90e2;
+    text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
+/* Lista de redirecciones */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li a {
+    font-size: 1.2em;
+}
+
+/* Pie de página */
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: #002f6c;
-    color: white;
-    position: fixed;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    position: relative;
     bottom: 0;
     width: 100%;
+    margin-top: 40px;
 }
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    table th, table td {
+        font-size: 1em;
+    }
+}
+
 
