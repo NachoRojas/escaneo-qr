@@ -1,30 +1,39 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #002f6c; /* Azul oscuro de Boca */
     margin: 0;
     padding: 0;
+    color: white;
 }
 
 header {
-    background-color: #003366;
-    color: white;
+    background-color: #ffc107; /* Amarillo de Boca */
+    color: #002f6c; /* Texto en azul */
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
 h1 {
     margin: 0;
+    font-size: 2em;
 }
 
 section {
     margin: 20px;
     padding: 20px;
-    background-color: white;
+    background-color: #ffc107; /* Fondo amarillo para las secciones */
     border-radius: 10px;
+    color: #002f6c; /* Texto en azul */
 }
 
 h2 {
-    color: #003366;
+    color: #002f6c;
+    border-bottom: 2px solid #002f6c;
+    padding-bottom: 5px;
+}
+
+p, li {
+    font-size: 1.2em;
 }
 
 table {
@@ -34,25 +43,32 @@ table {
 }
 
 table th, table td {
-    padding: 10px;
+    padding: 15px;
     text-align: left;
+    border: 1px solid #002f6c; /* Bordes en azul */
 }
 
 table th {
-    background-color: #003366;
-    color: white;
+    background-color: #002f6c; /* Azul en los encabezados */
+    color: white; /* Texto blanco */
 }
 
 table td {
-    background-color: #f4f4f4;
+    background-color: #ffc107; /* Amarillo para las celdas */
+    color: #002f6c;
+}
+
+table img {
+    max-width: 100px;
 }
 
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #003366;
+    background-color: #002f6c;
     color: white;
     position: fixed;
     bottom: 0;
     width: 100%;
 }
+
