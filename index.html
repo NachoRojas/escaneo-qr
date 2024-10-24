@@ -3,54 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Personal - Ignacio Rojas</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Mi Blog</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-        <div class="header-container">
-            <h1>Blog de Ignacio Rojas</h1>
-            <p>Estudiante de la Licenciatura en Gestión de Tecnología de la Información y apasionado por aprender constantemente</p>
+        <div class="container">
+            <h1>Mi Blog Personal</h1>
+            <nav>
+                <ul>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#publicaciones">Publicaciones</a></li>
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <section id="sobre-mi" class="content-section">
-        <h2>Sobre mí</h2>
-        <p>Soy una persona proactiva con ganas de aprender constantemente. Me gusta enfrentar nuevos desafíos que me permitan crecer laboral, profesional y personalmente. Tengo facilidad para las relaciones interpersonales, y considero que un buen clima laboral es esencial para el éxito.</p>
+    <!-- Sección Proyectos -->
+    <section id="proyectos" class="section-content">
+        <div class="container">
+            <h2>Proyectos</h2>
+            <p>Aquí puedes encontrar algunos de los proyectos en los que he trabajado.</p>
+            <article class="project">
+                <h3>Proyecto 1</h3>
+                <p>Descripción del proyecto 1.</p>
+            </article>
+
+            <article class="project">
+                <h3>Proyecto 2</h3>
+                <p>Descripción del proyecto 2.</p>
+            </article>
+        </div>
     </section>
 
-    <section id="blog" class="content-section">
-        <h2>Blog</h2>
-        <article class="blog-post">
-            <h3>Mi experiencia en Tienda León</h3>
-            <p>Actualmente me desempeño como Soporte Técnico, donde gestiono y resuelvo problemas de hardware y software, mejorando mis habilidades en tecnología y análisis de sistemas...</p>
-            <a href="#">Leer más</a>
-        </article>
+    <!-- Sección Publicaciones -->
+    <section id="publicaciones" class="section-content">
+        <div class="container">
+            <h2>Publicaciones</h2>
+            <article class="post">
+                <h3>Título de la entrada 1</h3>
+                <p class="date">Publicado el 24 de octubre de 2024</p>
+                <p>Este es el contenido de la primera entrada del blog.</p>
+                <a href="#" class="read-more">Leer más</a>
+            </article>
 
-        <article class="blog-post">
-            <h3>Mi paso por Daniel Jewelry Casting NYC</h3>
-            <p>Asistí en la fabricación y control de calidad de productos, destacando mi atención al detalle y habilidades en gestión de procesos. Coordiné inventarios y mantuve relaciones con proveedores...</p>
-            <a href="#">Leer más</a>
-        </article>
+            <article class="post">
+                <h3>Título de la entrada 2</h3>
+                <p class="date">Publicado el 15 de octubre de 2024</p>
+                <p>Contenido de la segunda entrada del blog.</p>
+                <a href="#" class="read-more">Leer más</a>
+            </article>
+        </div>
     </section>
 
-    <section id="contacto" class="content-section">
-        <h2>Contacto</h2>
-        <p>Email: ignaciorojaspucciano@gmail.com</p>
-        <p>Teléfono: 11-5099-5579</p>
-        <p>Localidad: Lanús Este, Buenos Aires</p>
+    <!-- Sección Sobre mí -->
+    <section id="sobre-mi" class="section-content">
+        <div class="container">
+            <h2>Sobre mí</h2>
+            <p>Hola, soy Ignacio. Este es mi blog donde comparto proyectos y publicaciones interesantes. ¡Gracias por visitarlo!</p>
+        </div>
     </section>
 
+    <!-- Pie de página -->
     <footer>
-        <p>&copy; 2024 Ignacio Rojas - Blog Personal</p>
+        <div class="container">
+            <p>&copy; 2024 Mi Blog Personal. Todos los derechos reservados.</p>
+        </div>
     </footer>
 </body>
 </html>
-
