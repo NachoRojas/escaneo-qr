@@ -1,6 +1,6 @@
 /* General */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -9,7 +9,7 @@ body {
 
 /* Contenedor principal */
 .container {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -45,26 +45,43 @@ nav ul li a:hover {
     color: #ccc;
 }
 
-/* Secciones del contenido */
+/* Sección Proyectos y Publicaciones */
 .section-content {
     padding: 40px 0;
 }
 
 h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+/* Estilo de la grilla para proyectos y publicaciones */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
 }
 
 .project, .post {
     background-color: #fff;
     padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
-.post h3, .project h3 {
-    margin-top: 0;
+.project:hover, .post:hover {
+    transform: translateY(-5px);
+}
+
+.project img, .post img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project h3, .post h3 {
+    margin-top: 10px;
 }
 
 .post .date {
@@ -84,6 +101,26 @@ h2 {
 .read-more:hover {
     color: #000;
     border-bottom: 1px solid #000;
+}
+
+/* Sección Sobre mí */
+.sobre-mi-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sobre-mi-content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.sobre-mi-content p {
+    text-align: center;
+    max-width: 600px;
 }
 
 /* Pie de página */
