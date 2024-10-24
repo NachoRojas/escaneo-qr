@@ -1,92 +1,99 @@
-* {
+/* General */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
+    background-color: #f4f4f4;
     color: #333;
 }
 
+/* Contenedor principal */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Encabezado */
 header {
-    background-color: #2c3e50;
+    background-color: #333;
     color: #fff;
-    padding: 20px;
+    padding: 20px 0;
     text-align: center;
 }
 
+header h1 {
+    margin: 0;
+}
+
 nav ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    padding: 10px;
-    background-color: #34495e;
+    list-style: none;
+    padding: 0;
 }
 
 nav ul li {
+    display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    font-size: 18px;
+    font-weight: bold;
 }
 
-.header-container h1 {
-    font-size: 2.5em;
+nav ul li a:hover {
+    color: #ccc;
 }
 
-.header-container p {
-    font-size: 1.2em;
-    margin-top: 10px;
+/* Secciones del contenido */
+.section-content {
+    padding: 40px 0;
 }
 
-.content-section {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.content-section h2 {
-    font-size: 2em;
-    margin-bottom: 15px;
-}
-
-.blog-post {
+h2 {
+    text-align: center;
     margin-bottom: 20px;
 }
 
-.blog-post h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+.project, .post {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.blog-post p {
-    font-size: 1.1em;
-    line-height: 1.6;
+.post h3, .project h3 {
+    margin-top: 0;
 }
 
-.blog-post a {
-    color: #3498db;
+.post .date {
+    color: #999;
+    font-size: 0.9em;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #333;
     text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid #333;
 }
 
-.blog-post a:hover {
-    text-decoration: underline;
+.read-more:hover {
+    color: #000;
+    border-bottom: 1px solid #000;
 }
 
+/* Pie de página */
 footer {
+    background-color: #333;
+    color: #fff;
     text-align: center;
-    padding: 10px;
-    background-color: #34495e;
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
 }
